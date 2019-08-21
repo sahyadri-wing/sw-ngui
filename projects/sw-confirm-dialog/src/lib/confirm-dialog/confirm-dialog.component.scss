@@ -1,0 +1,71 @@
+$color_primary: #EE6352;
+$color_silver: #EDEEF3;
+$color_green: #008000;
+
+:host {
+  --btn_theme_color: #{$color_primary};
+}
+
+::ng-deep .confirmation_modal {
+  .mat-dialog-container {
+    padding: 0px !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+.confirmation_card {
+  padding: 30px 15px 15px 15px;
+  background-color: transparent;
+
+  .card {
+    border: 0px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14);
+
+    .card_header {
+      background-color: #6295b6;
+      color: #fff;
+      border: 0px;
+      border-radius: 4px 4px 0px 0px;
+      box-shadow: none;
+      position: relative;
+
+      .card_title {
+        text-align: center;
+      }
+
+      .icon_close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 2px;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+    }
+
+    .card_footer {
+      margin-bottom: 0.25rem;
+
+      .button {
+        color: var(--btn_theme_color) !important;
+        background: $color_silver !important;
+      }
+
+      .button_color_green {
+        color: $color_green !important;
+      }
+    }
+  }
+}

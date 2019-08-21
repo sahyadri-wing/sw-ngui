@@ -1,0 +1,28 @@
+<div class="container confirmation_card" cdkFocusInitial>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card ">
+        <div class="card_header card_header_secondary mb-2">
+          <h4 class="card_title mb-0"> {{data.title}}</h4>
+          <!-- <p class="card-category"> {{subtitle}}</p> -->
+          <i class="material-icons icon_close" (click)="close()">
+            close
+          </i>
+        </div>
+        <div class="container-fluid card_body">
+          <p> {{data.message}} </p>
+          <ng-content></ng-content>
+        </div>
+        <div class="container-fluid card_footer">
+          <div class="row">
+            <div class="col-12 text-center">
+              <button class="btn button mx-2" [ngClass]="{'button_color_green':(!!btnName && (btnName.toLowerCase() === 'confirm'))}" *ngFor="let btnName of data.buttonName; let i = index" (click)="submit(btnName, i)">
+                {{btnName}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

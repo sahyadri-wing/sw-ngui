@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "sw-confirm-dialog": [
+        "dist/sw-confirm-dialog"
+      ],
+      "sw-confirm-dialog/*": [
+        "dist/sw-confirm-dialog/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
